@@ -1,4 +1,5 @@
-AI Grip Pressure Estimation for Robotic Grasping
+# AI Grip Pressure Estimation for Robotic Grasping
+https://youtu.be/nXF1zteT9B8
 
 AI-powered robotic grasping: estimate grip pressure from a webcam using MediaPipe + machine learning — no force sensor required.
 
@@ -17,7 +18,7 @@ Documentation An AI robotics project capable of interacting with its physical en
 └── logs/                      # 📁  Logs, graphics, reports
 Recommended WorkflowStep 1 — Capture DataBashpython main.py
 # Enter the object name (e.g., water_bottle)
-# [8] increase pressure  [2] decrease pressure  [SPACE] pause  [Q] quit
+ [8] increase pressure  [2] decrease pressure  [SPACE] pause  [Q] quit
 
 Step 2 — Run the Full PipelineBashpython pipeline.py
 This executes the following sequence: merge → clean → analyze → train.Step 3 — Test the ModelBashpython test_model.py --batch      # evaluation on the entire dataset
@@ -28,7 +29,7 @@ python robot_autonome.py          # decision-making simulation
 
 # Terminal 2 (optional): Publish sensor data
 rostopic pub /sensor/landmarks std_msgs/Float64MultiArray "data: [...]" -r 10
-For the complete installation and configuration guide: see GAZEBO_SETUP.mdDependenciesBashpip install opencv-python mediapipe scikit-learn pandas numpy matplotlib joblib
+For the complete installation and configuration guide: install opencv-python mediapipe scikit-learn pandas numpy matplotlib joblib
 
 
 License
